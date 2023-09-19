@@ -9,7 +9,11 @@ class EntradaDeTexto{
 
     //debe de existir un metodo principal
 
-    public static void mian(String[]args) throws IOException{
+    /**
+     * @param args
+     * @throws IOException
+     */
+    public static void main(String[]args) throws IOException{
 
         //debemos de crear una estructura basica
         //declaracion
@@ -26,6 +30,7 @@ class EntradaDeTexto{
         //console() es el metodo que puede obtener datos de la consola 
         //readLine() es el metodo que puede dar lectura a los datos introducidos 
         System.out.print("Hola"+ nombre + "Bienvenido a tronar wii");
+    
 
     }
 

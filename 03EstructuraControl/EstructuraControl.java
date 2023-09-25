@@ -42,7 +42,7 @@ class EstructuraControl{
       //las variables son de dos tipos globales y locales
       //si la declaro dentro del metodo es local
       
-      int opcion, numbinario, total, cantidadproducto, num1, edad;
+      int opcion, numbinario, total, cantidadproducto, edad, calcularFactorial;
       float precio, resultado , compra = 0, temperatura , Resultado, precioAbono, cantidad ;
       String nombreproducto;
       String binario = "";
@@ -88,7 +88,7 @@ class EstructuraControl{
                      precioAbono *= 0.55;
                   }else {
                      System.out.println("Se le aplicara un despuesto del 25%");
-                     precioAbono *= 0.75;
+                     
                   }
                   System.out.println("El precio del abono es:" + precioAbono);
                }
@@ -152,7 +152,7 @@ class EstructuraControl{
                   contadorNegativos++;
                }
              }
-             System.out.println("Cantidad de nuemros positivos: " + contadorPositivos);
+             System.out.println("Cantidad de numeros positivos: " + contadorPositivos);
              System.out.println("Cantidad de numeros negativos: " + contadorNegativos);
 
              
@@ -241,23 +241,168 @@ class EstructuraControl{
 
              }
              break;
+
             case 7:
+             int filas2 = 11;
+             for (int i = 0 ; i < filas2; i++){
+               if (i < 10){
+                  System.out.println(i);
+                  System.out.println(i * 10);
+                System.out.println(i * 100);
+                System.out.println(i * 1000);
+               }else{
+                  System.out.println(i);
+                  System.out.println(i * 100);
+                  System.out.println(i * 1000);
+                  System.out.println(i * 1000);
+               }
+               System.out.println();
+             }
+
              break;
             case 8:
+             System.out.print("Ingrese un entero no negativo");
+             int n = entrada.nextInt();
+             if (n < 0 ){
+               System.out.println("El numero ingresado es negativo, no se puede calcular facctorial");
+               return;
+             }
+             long factorial = n;
+             System.out.println("El factorial de " + n + " es: " + factorial);
+               if (n == 0 || n == 1){
+                  
+               }
+                int factorial1 = 1;
+               for (int i = 1; i <= n; i++){
+                  factorial *= i;
+
+               }
              break;
             case 9:
+             System.out.print("Ingrese el tamano del lado del cuadrado (eentre 1 y 20)");
+             int lado = entrada.nextInt();
+             if (lado<1 || lado > 20){
+               System.out.println("Tamano no valido");
+             }
+             for ( int i = 0; i < lado; i++){
+               for (int j = 0; j < lado; j++){
+                  
+                     System.out.print("*");
+               }            
+               System.out.println();
+             }
              break;
             case 10:
+             System.out.print("Ingrese el tamano del lado del cuadrado (eentre 1 y 20)");
+             int lado1 = entrada.nextInt();
+             if (lado1<1 || lado1 > 20){
+               System.out.println("Tamano no valido");
+             }
+             for ( int i = 0; i < lado1; i++){
+               for (int j = 0; j < lado1; j++){
+                  if (i == 0 || i == lado1 - 1 || j == 0 ||j == lado1 -1 ){
+                     System.out.print("*");
+                  }else{
+                     System.out.print(" ");
+                  }
+               }
+               System.out.println();
+             }
              break;
             case 11:
+             int filas =8;
+             for (int i = 1; i <= filas; i++){
+               if (i % 2 == 0) {
+                  System.out.print(" ");
+                  for (int j = 1; j <= filas; j++){
+                     System.out.print("*");
+                  }
+               }
+               else {
+                  for (int j = 1; j<= filas; j++){
+                     System.out.print("*");
+                  }
+               }
+               System.out.println();
+             }
              break;
             case 12:
+             System.out.print("Ingrese el número de filas del patrón (debe ser impar): ");
+             int filas1 = entrada.nextInt();
+             int mitad = entrada.nextInt();
+             if (filas1 % 2 == 0 ){}
+              mitad = filas1 / 2;
+              for (int i = 0; i <= mitad; i++){
+                for (int j = 0; j < mitad - i; j++){
+                  System.out.print("  ");
+               }
+               for (int k = 0; k < 2 * i + 1; k++){
+                  System.out.print("*");
+               }
+               System.out.println();
+              }
+              for (int i = 1; i <= mitad; i++) {
+               for (int j = 0; j < i; j++) {
+                   System.out.print(" ");
+               }
+               for (int k = 0; k < 2 * (mitad - i) + 1; k++) {
+                  System.out.print("*");
+              }
+              System.out.println();
+          }
              break;
             case 13:
+             System.out.print("Ingrese el primer numero: ");
+
+             double num1 = entrada.nextDouble();
+
+             System.out.print("Ingrese el segundo numero: ");
+             double num2 = entrada.nextDouble();
+
+             System.out.println("Seleccione la operacion: ");
+             System.out.println("1- Suma");
+             System.out.println("2- Resta ");
+             System.out.println("3- Multiplicacion");
+             System.out.println("4- Division");
+
+             int opcion2 = entrada.nextInt();
+
+             double resultado1 =0;
+
+             switch (opcion2){
+
+               case 1:
+                resultado1 = num1 + num2;
+               break;
+               case 2:
+                resultado1 = num1 - num2;
+               break;
+               case 3:
+                resultado1 = num1 * num2;
+               break;
+               case 4:
+               if (num2 != 0){
+                resultado1 = num1 / num2;
+                } else{
+                 System.out.println("No se puede dividir por cero");
+                 return; 
+                }
+               break;
+               default:
+               System.out.println("Opcion no valida ");
+               return;
+               }
+             System.out.println("El resultado es: " + resultado1);
+
+            
+             
+             
+
              break;
-            case 14:
+             case 14:
+              
              break;
-            default:
+             default:
                System.out.println("Elije la opcion");
                break;
             
@@ -271,7 +416,7 @@ class EstructuraControl{
          letra = entrada.next().charAt(0);
       }while(letra == 's' || letra == 'S');
 
-
+      
 
    }
 

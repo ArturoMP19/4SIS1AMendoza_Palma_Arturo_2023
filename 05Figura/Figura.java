@@ -3,7 +3,7 @@ import java.lang.Math;
 
 public class Figura{
     //variables
-    double lado, altura, area, perimetro;
+    double lado, altura, area, perimetro, base, lado2, lado3;
     int opcion;
     char letra;
 
@@ -60,10 +60,47 @@ public class Figura{
     }
 
     public void calcularRectangulo(){
-
+        try{
+            System.out.println("Ingresa el valor de la base del rectangulo");
+            base = entrada.nextDouble();
+            System.out.println("Ingresa el valor de la altura del rectangulo");
+            altura = entrada.nextDouble();
+            perimetro = base*2 + altura*2;
+            area = base*altura;
+            System.out.println("El perimetro es de: " + perimetro + " El area es de: " + area);
+        }catch(Exception e){
+            //manejar el error
+            System.out.println("Ingresa solo numeros");
+            System.out.println("Error: " + e.getMessage());
+            letra = entrada.next().charAt(0);
+        }
     }
 
+    
+
     public void calcularTriangulo(){
+        try{
+            System.out.println("Ingresa los 3 lados del triangulo");
+            System.out.println("1er lado");
+            lado = entrada.nextDouble();
+            System.out.println("2do lado");
+            lado2 = entrada.nextDouble();
+            System.out.println("3er lado");
+            lado3 = entrada.nextDouble();
+            perimetro = lado+lado2+lado3;
+            System.out.println("Ingresa la base del triangulo");
+            base = entrada.nextDouble();
+            System.out.println("Ingresa la altura del triangulo");
+            altura = entrada.nextDouble();
+            area = base*altura/2;
+            System.out.println("El perimetro es de: " + perimetro + " El area es de: " + area);
+        }catch(Exception e){
+            //manejar el error
+            System.out.println("Ingresa solo numeros");
+            System.out.println("Error: " + e.getMessage());
+            letra = entrada.next().charAt(0);
+        }
+
         
     }
 }

@@ -275,7 +275,7 @@ class EstructuraControl{
                 int factorial1 = 1;
                for (int i = 1; i <= n; i++){
                   factorial *= i;
-
+                  
                }
              break;
             case 9:

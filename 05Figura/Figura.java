@@ -32,6 +32,7 @@ public class Figura{
                  calcularRectangulo();
                   break;
                 case 3:
+                 
                  calcularTriangulo();
 
                   break;

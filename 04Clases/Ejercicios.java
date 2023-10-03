@@ -48,7 +48,7 @@ class Ejercicios{
         //o funciones que necesiten una entrada o salida de algun tipo de dato
 
         //calculadora
-        double num1 = 0.00, suma = 0.00, multi = 1.00;
+        double num1 = 0.00, suma = 0.00, multi = 1.00, divi = 1.00;
         char operacion;
 
         System.out.println("Selecciona la operacion que deseas realizar:");
@@ -86,9 +86,16 @@ class Ejercicios{
                 System.out.println("El resultado de la operacion es: " + multi);
                 break;
             case 'c':
-
+                System.out.println("Para obtener la divicion, ingrese 0");
             //ahi hagan la division de tarea :3
             //dame un num1 / num2
+                do{
+                    System.out.println("Escriba el numero que desee dividir");
+                    num1 = entrada.nextDouble();
+                    if(num1 != 0){
+                        divi *= num1;
+                    }
+                }while (num1 != 0 );
 
                 break;
             default:
@@ -102,7 +109,7 @@ class Ejercicios{
         //kg a libras
         //m/s  a km/s
         //m a yardas y millas
-        double metros = 0.00, kg = 0.00, velocidad = 0.00, pulgada = 0.0254, gramos = 1000.00, libra = 0.453592, ms = 0.00, cm = 0.00;
+        double metros = 0.00, kg = 0.00, velocidad = 3.60 , pulgada = 0.0254, gramos = 1000.00, libra = 0.453592, ms = 0.00, cm = 0.00, yarda = 1.09, millas = 0.00062;
         double conversion1, conversion2;
 
         System.out.println("Selecciona la cantidad que deseass convertir acorde a las siguientes unidades");
@@ -133,8 +140,22 @@ class Ejercicios{
              + conversion1 + "de kg a libras son: " + conversion2);
              break;
             case 'c':
+             System.out.println("Ingresa los m/s que deseas a transformar");
+             
+             ms = entrada.nextDouble();
+             conversion1 = ms * velocidad;
+             System.out.println("La cantidad de m/s es: " + ms + "de m/s a km/s es: " + conversion1);   
              break;
             case 'd':
+                System.out.println("Ingresa los metros que deseas convertir a yardas y millas: ");
+
+                metros = entrada.nextDouble();
+
+                conversion1 = metros * yarda;
+                conversion2 = metros * millas;
+                System.out.println("La cantidad de metros es: " + metros + "de m a yardas son: "
+             + conversion1 + "de m a millas son: " + conversion2);
+
              break;
             default:
              System.out.println("Opcion no valida ");

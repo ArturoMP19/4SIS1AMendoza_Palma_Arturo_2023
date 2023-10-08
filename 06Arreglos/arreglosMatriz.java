@@ -47,7 +47,10 @@ public class arreglosMatriz {
             }
         }
 
-        int sumarFilas = 0;
+        //vamos a sumar y promediar
+        
+        float sumarFilas = 0;
+        
         for(int i = 0; i <matriz.length; i++){
             for(int j = 0; j < matriz.length; j++){
                 //sumar las filas

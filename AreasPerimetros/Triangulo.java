@@ -23,7 +23,7 @@ class Triangulo extends FiguraGeometrica {
     }
 
     private void PerimetroTri() {
-        System.out.println("Escribe los tres lados del triangulo para sacar el perimetro");
+       
         this.perimetro = lado1 + lado2 + lado3;
     }
 }

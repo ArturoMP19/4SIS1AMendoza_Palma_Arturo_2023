@@ -88,7 +88,7 @@ ventana.setLocation(dim.width / 2 - ventana.getSize().width / 2, dim.height / 2 
        
       
        
-       //agregamos los botenes 
+       
        JButton loginbutton =  new JButton ("Iniciar sesion");
        loginbutton.setBounds(10, 80, 120, 25);
        panel.add(loginbutton);
@@ -96,21 +96,21 @@ ventana.setLocation(dim.width / 2 - ventana.getSize().width / 2, dim.height / 2 
        JButton registrarbutton = new JButton ("Registrate");
        registrarbutton.setBounds(180, 80, 120, 25);
        panel.add(registrarbutton);
-        // Agregar un ActionListener al botón "Iniciar sesión"
+      
 loginbutton.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
         String username = usertxt.getText();
-        char[] password = passtxt.getPassword(); // Obtener la contraseña como un array de caracteres
+        char[] password = passtxt.getPassword(); 
         
-        // Verificar las credenciales (usuario ficticio)
+        
         if (username.equals("ArturoMP") && new String(password).equals("987654321")) {
             JOptionPane.showMessageDialog(null, "¡Bienvenido!");
         } else {
             JOptionPane.showMessageDialog(null, "Usuario inválido");
         }
         
-        // Limpiar los campos de usuario y contraseña
+       
         usertxt.setText("");
         passtxt.setText("");
     }

@@ -22,7 +22,7 @@ public class Examen03 extends JFrame {
 
     public Examen03() {
         
-        super("Interfaz con 4 botones");
+        super("CAJERO DE OTSO");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 500);
         setLocationRelativeTo(null);

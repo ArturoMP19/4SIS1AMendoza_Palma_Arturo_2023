@@ -93,7 +93,7 @@ public class Figura{
             System.out.println("Ingresa la altura del triangulo");
             altura = entrada.nextDouble();
             area = base*altura/2;
-            System.out.println("El perimetro es de: " + perimetro + " El area es de: " + area);
+            System.out.println("El perimetro es de: " + perimetro + " El area es de: " + area)
         }catch(Exception e){
             //manejar el error
             System.out.println("Ingresa solo numeros");
